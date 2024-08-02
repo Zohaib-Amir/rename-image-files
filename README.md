@@ -1,4 +1,3 @@
-
 # Rename Image Files
 
 This project is designed to rename image files based on specific criteria. It supports various image formats and integrates with the OpenAI API.
@@ -9,6 +8,7 @@ This project is designed to rename image files based on specific criteria. It su
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Supported Image Formats](#supported-image-formats)
+- [Directory Structure](#directory-structure)
 - [License](#license)
 
 ## Installation
@@ -46,6 +46,7 @@ These formats are defined in the [`SUPPORTED_IMAGE_FORMATS`](src/index.ts) const
 
 - `image-files/`: Directory containing the image files to be renamed.
 - `src/`: Source code directory.
-  - [`helpers.ts`](src/helpers.ts): Contains helper functions like [`convertBufferToBase64URI`](src/helpers.ts).
+  - [`OpenAIHandler.ts`](src/OpenAIHandler.ts): Handles interactions with the OpenAI API.
+  - [`ImageDirectory.ts`](src/ImageDirectory.ts): Contains the `ImageDirectory` class for managing image files and all fine handling operations
+  - [`ImageFileRenamer.ts`](src/ImageFileRenamer.ts): Main class that utilizes rest of the classes to rename the files.
   - [`index.ts`](src/index.ts): Main entry point of the application.
-  - [`openai.ts`](src/openai.ts): Handles interactions with the OpenAI API.
